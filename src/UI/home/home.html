@@ -228,13 +228,124 @@
                         </button></th>
                     </tr>
                 </table>
+                <table id="retFlight" class="search-results">
+                    <caption id="cap-2"></caption>
+                    <tr>
+                        <th>Departure Time</th>
+                        <th>Arrival Time</th>
+                        <th>Total Time</th>
+                        <th>Layover?</th>
+                        <th>Ticket Price</th>                    
+                        <th>Select</th>
+                    </tr>
+                    <tr>
+                        <th>6:30 a.m.</th>
+                        <th>10:00 a.m.</th>
+                        <th>3 Hr. 30 min.</th>
+                        <th>no</th>
+                        <th id='10'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>7:05 a.m.</th>
+                        <th>10:25 a.m.</th>
+                        <th>3 Hr. 20 min.</th>
+                        <th>no</th>
+                        <th id='11'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>8:15 a.m.</th>
+                        <th>12:45 p.m.</th>
+                        <th>4 Hr. 30 min.</th>
+                        <th>1 (30 min)</th>
+                        <th id='12'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>9:35 a.m.</th>
+                        <th>4:00 p.m.</th>
+                        <th>6 Hr. 25 min.</th>
+                        <th>1 (2 hr)</th>
+                        <th id='13'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>11:00 a.m.</th>
+                        <th>2:15 p.m.</th>
+                        <th>3 Hr. 15 min.</th>
+                        <th>no</th>
+                        <th id='14'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>12:05 p.m.</th>
+                        <th>3:50 p.m.</th>
+                        <th>3 Hr. 45 min.</th>
+                        <th>no</th>
+                        <th id='15'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>12:55 p.m.</th>
+                        <th>4:30 p.m.</th>
+                        <th>3 Hr. 35 min.</th>
+                        <th>no</th>
+                        <th id='16'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>1:25 p.m.</th>
+                        <th>5:55 a.m.</th>
+                        <th>4 Hr. 30 min.</th>
+                        <th>1 (42 min)</th>
+                        <th id='17'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>2:10 p.m.</th>
+                        <th>6:00 p.m.</th>
+                        <th>3 Hr. 50 min.</th>
+                        <th>no</th>
+                        <th id='18'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                    <tr>
+                        <th>3:00 p.m.</th>
+                        <th>7:00 p.m.</th>
+                        <th>4 Hr. 00 min.</th>
+                        <th>1 (30 min)</th>
+                        <th id='19'></th>
+                        <th><button type="submit">
+                                Select
+                        </button></th>
+                    </tr>
+                </table>
             <!-- </div> -->
         </div>
 
         <script>
             function priceGen() {
                 let y = document.getElementById("passengers").selectedIndex;
-                for(let i = 0; i < 10; i++) {
+                for(let i = 0; i < 20; i++) {
                     let x = y * (Math.floor((Math.random()*100)+1) +500);
                     document.getElementById(i).innerHTML = '$' + x;
                 }
@@ -261,45 +372,46 @@
                 } else if(document.getElementById('orig').selectedIndex == 3) {
                     orig = "Denver, CO";
                 } else if(document.getElementById('orig').selectedIndex == 4) {
-                    let orig = "Honolulu, HI";
+                    orig = "Honolulu, HI";
                 } else if(document.getElementById('orig').selectedIndex == 5) {
-                    let orig = "Los Angeles, CA";
+                    orig = "Los Angeles, CA";
                 } else if(document.getElementById('orig').selectedIndex == 6) {
-                    let orig = "New York, NY";
+                    orig = "New York, NY";
                 } else if(document.getElementById('orig').selectedIndex == 7) {
-                    let orig = "Portland, OR";
+                    orig = "Portland, OR";
                 } else if(document.getElementById('orig').selectedIndex == 8) {
-                    let orig = "Seatle, WA";
+                    orig = "Seatle, WA";
                 } else if(document.getElementById('orig').selectedIndex == 9) {
-                    let orig = "Tampa, FL";
+                    orig = "Tampa, FL";
                 } else if(document.getElementById('orig').selectedIndex == 10) {
-                    let orig = "Washington, DC";
+                    orig = "Washington, DC";
                 };
                 if(document.getElementById('dest').selectedIndex == 1) {
-                    let dest = "Charlotte, NC";
+                    dest = "Charlotte, NC";
                 } else if(document.getElementById('dest').selectedIndex == 2) {
-                    let dest = "Chicago, IL";
+                    dest = "Chicago, IL";
                 } else if(document.getElementById('dest').selectedIndex == 3) {
-                    let dest = "Denver, CO";
+                    dest = "Denver, CO";
                 } else if(document.getElementById('dest').selectedIndex == 4) {
                     dest = "Honolulu, HI";
                 } else if(document.getElementById('dest').selectedIndex == 5) {
-                    let dest = "Los Angeles, CA";
+                    dest = "Los Angeles, CA";
                 } else if(document.getElementById('dest').selectedIndex == 6) {
-                    let dest = "New York, NY";
+                    dest = "New York, NY";
                 } else if(document.getElementById('dest').selectedIndex == 7) {
-                    let dest = "Portland, OR";
+                    dest = "Portland, OR";
                 } else if(document.getElementById('dest').selectedIndex == 8) {
-                    let dest = "Seatle, WA";
+                    dest = "Seatle, WA";
                 } else if(document.getElementById('dest').selectedIndex == 9) {
-                    let dest = "Tampa, FL";
+                    dest = "Tampa, FL";
                 } else if(document.getElementById('dest').selectedIndex == 10) {
-                    let dest = "Washington, DC";
+                    dest = "Washington, DC";
                 };
                 // let orig = document.getElementById('orig');
                 // let dest = document.getElementById('dest');
                 
                 document.getElementById('cap').innerHTML = orig + ' - ' + dest;
+                document.getElementById('cap-2').innerHTML = dest + ' - ' + orig;
             }
         </script>
         <!-- <script>
