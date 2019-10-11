@@ -8,10 +8,32 @@
         <meta name='viewport' content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" type="text/css" media="screen" href="home.css" />
+        <!-- <script>
+            $(document).ready(function() {
+                let header = $('body');
+
+                let backgrounds = new Array(
+                    'url(../../assets/beachfront.png)',
+                    'url()',
+                    'url()',
+                    'url()'
+                );
+
+                let current=0;
+
+                function nextBackground() {
+                    current++;
+                    current = current % backgrounds.length;
+                    document.getElementById("body").css('background-image', backgrounds[current]);
+                }
+                setInterval(nextBackground, 1000);
+                document.getElementById("body").css('background-image', backgrounds[0]);
+            });
+        </script> -->
     </head>
 
     <body>
-        <div class="full-page">
+        <div id="body" class="full-page">
             <ul class="navbar">
                 <li><a href="#home">Home</a></li>
             </ul>
@@ -117,6 +139,7 @@
             </div> -->
 
             <!-- <div id="initial-depart" class="tab-content"> -->
+            <div class="flight-options">
                 <table id="depFlight" class="search-results">
                     <caption id="cap"></caption>
                     <tr>
@@ -339,6 +362,7 @@
                         </button></th>
                     </tr>
                 </table>
+            </div>
             <!-- </div> -->
         </div>
 
@@ -354,6 +378,7 @@
         <script>
             function hideflights(){
                 let rad = document.getElementById("depFlight");
+                let x = document.getElementById("retFlight");
                 if (rad.style.display === "none") {
                     rad.style.display = "block";
                 } else {
